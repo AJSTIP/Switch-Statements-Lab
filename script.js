@@ -1,9 +1,18 @@
 let player = "Partner,";
 player ? console.log("Howdy " + player + " Ask Me Anything!") : console.log("Howdy");
-let playerQuestion = "Can you answer my question?";
-console.log(" You Asked " + playerQuestion);
+let playerQuestion = document.getElementById("submitBtn").innerHTML.value;
+console.log(" You Asked " + playerQuestion );
 let randomNumber = Math.floor(Math.random() * 10);
 let eightBall = " ";
+
+function f() {
+  var t = document.getElementById("questionBox").value;
+  document.getElementById("outputtext").innerHTML = t;
+}
+
+function z() {
+
+}
 
 switch (randomNumber) {
   case 0:
