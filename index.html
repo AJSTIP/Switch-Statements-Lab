@@ -7,19 +7,24 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>SS</title>
+    <title>SS Magic 8 Ball</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
   </head>
-        <h1 id="intro">Howdy Partner, Ask Me Anything!</h1>
-        <h1 id="outputtext"></h1>
-        <input id="questionBox" type="text" />
-        <button onclick="f()" id="submitBtn" name="submitBtn" type="button"><--- Submit Question Here</button>
-        <h2 id="questionRepeat">Your Question Will Appear above the Box</h2>
-        <h3 id="eightBallResponse">The Magic 8 Ball's Repsponse Will Go Here</h3>
-
-        <h1 id="htmlEightBallResponse"></h1>
+  <div id="main">
+    <h1>The all Knowing Magic 8 Ball 🦖</h1>
+    <p id="instructions">
+      Ask Me what Ever question you Desire than Click on the Magic 8 Ball
+    </p>
+    <div id="magicEightBall" class="magicEight-Ball">
+      <div class="answer">
+        <p id="eight">8</p>
+        <p id="answer"></p>
+      </div>
+    </div>
+    <input type="text" id="question" />
+  </div>
   <body>
     <script src="script.js" async defer></script>
   </body>

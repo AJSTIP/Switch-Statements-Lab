@@ -1,50 +1,39 @@
-let player = "Partner,";
-player ? console.log("Howdy " + player + " Ask Me Anything!") : console.log("Howdy");
-let playerQuestion = document.getElementById("submitBtn").innerHTML.value;
-console.log(" You Asked " + playerQuestion );
-let randomNumber = Math.floor(Math.random() * 10);
-let eightBall = " ";
+var answers = [
+  "Indeed",
+  "No",
+  "Perhaps",
+  "Inaudibly",
+  "MaYbE",
+  "One Day... One Day",
+  "I say No",
+  "Survey Says *buzzer noise*",
+  "Yes",
+  "Signs point to absolutley not",
+  "Not in your favor",
+  "Not happening",
+  "Zoinks thats not good",
+  "Yooo Lets go you win",
+  "Very doubtful",
+  "😂😂😂",
+  "Ask again later",
+  "Please wait until after the beep",
+  "Cannot say right now come back in 6-10 business days",
+  "110%",
+];
 
-function f() {
-  var t = document.getElementById("questionBox").value;
-  document.getElementById("outputtext").innerHTML = t;
-}
+window.onload = function () {
+  var eight = document.getElementById("eight");
+  var answer = document.getElementById("answer");
+  var eightball = document.getElementById("magicEightBall");
+  var question = document.getElementById("question");
 
-function z() {
-
-}
-
-switch (randomNumber) {
-  case 0:
-    eightBall = "Yes";
-    break;
-  case 1:
-    eightBall = "No";
-    break;
-  case 2:
-    eightBall = "Perhaps";
-    break;
-  case 3:
-    eightBall = "Cannot tell";
-    break;
-  case 4:
-    eightBall = "I Would not Count On It";
-    break;
-  case 5:
-    eightBall = "My Sources Say No";
-    break;
-  case 6:
-    eightBall = "Your Future Looks Grim";
-    break;
-  case 7:
-    eightBall = "Good News My Sources Say Yes";
-    break;
-  case 8:
-    eightBall = "Absolutley Positive";
-    break;
-  case 9:
-    eightBall = "Cold";
-    break;
-}
-
-console.log(eightBall);
+  eightball.addEventListener("click", function () {
+    if (question.value.length < 1) {
+      alert("Enter a question!");
+    } else {
+      eight.innerText = "";
+      var num = Math.floor(Math.random() * Math.floor(answers.length));
+      answer.innerText = answers[num];
+    }
+  });
+};
